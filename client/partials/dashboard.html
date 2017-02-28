@@ -1,0 +1,15 @@
+<div id="actions">
+	<button ng-click="newProject()">Create New Project</button>
+</div>
+<div id="myProjects">
+	<h2>My Projects</h2>
+	<div ng-repeat="project in projects" ng-click="goToProject(project._id)">
+		<h3 ng-bind="project.name"></h3>
+	</div>
+</div>
+<div id="myCollaborations">
+	<div ng-repeat="collaboration in collaborations" ng-click="goToProject(collaboration._id)">
+		<h3 ng-bind="collaboration.name"></h3>
+		<p ng-bind="collaboration.owner.name"></p>
+	</div>
+</div>

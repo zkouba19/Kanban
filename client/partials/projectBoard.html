@@ -1,0 +1,59 @@
+<div>
+	<button><a href="#/projects/{{user._id}}/task">Add A Task</a></button>
+</div>
+<div>
+	<div id="backlog" class="columns">
+		<div class="backlog" ng-repeat="task in tasks | orderBy: 'priority' " ng-if="task.status == 'Backlog' ">
+			<h5 ng-bind="task.name"></h5>
+			<p ng-bind="task.description"></p>
+			<p><span ng-bind="task.owner.firstName"></span> <span ng-bind="task.owner.lastName"></span></p>
+			<p ng-bind="task.dueDate"></p>
+			<button><a href="#!/projects/{{project._id}}/task/{{task._id}}"></a></button>
+		</div>
+	</div>
+	<div id="toDo" class="columns">
+		<div class="toDoTask" ng-repeat="task in tasks | orderBy: 'priority' " ng-if="task.status == 'To Do' ">
+			<h5 ng-bind="task.name"></h5>
+			<p ng-bind="task.description"></p>
+			<p><span ng-bind="task.owner.firstName"></span> <span ng-bind="task.owner.lastName"></span></p>
+			<p ng-bind="task.dueDate"></p>
+			<button><a href="#!/projects/{{project._id}}/task/{{task._id}}"></a></button>
+		</div>
+	</div>
+	<div id="inProgress" class="columns">
+		<div class="inProgressTask" ng-repeat="task in tasks | orderBy: 'priority' " ng-if="task.status == 'In Progress' ">
+			<h5 ng-bind="task.name"></h5>
+			<p ng-bind="task.description"></p>
+			<p><span ng-bind="task.owner.firstName"></span> <span ng-bind="task.owner.lastName"></span></p>
+			<p ng-bind="task.dueDate"></p>
+			<button><a href="#!/projects/{{project._id}}/task/{{task._id}}"></a></button>
+		</div>
+	</div>
+	<div id="readyToTest" class="columns">
+		<div class="readyToTestTask" ng-repeat="task in tasks | orderBy: 'priority' " ng-if="task.status == 'Ready To Test' ">
+			<h5 ng-bind="task.name"></h5>
+			<p ng-bind="task.description"></p>
+			<p><span ng-bind="task.owner.firstName"></span> <span ng-bind="task.owner.lastName"></span></p>
+			<p ng-bind="task.dueDate"></p>
+			<button><a href="#!/projects/{{project._id}}/task/{{task._id}}"></a></button>
+		</div>
+	</div>
+	<div id="readyToDeploy" class="columns">
+		<div class="readyToDeployTask" ng-repeat="task in tasks | orderBy: 'priority' " ng-if="task.status == 'Ready To Deploy' ">
+			<h5 ng-bind="task.name"></h5>
+			<p ng-bind="task.description"></p>
+			<p><span ng-bind="task.owner.firstName"></span> <span ng-bind="task.owner.lastName"></span></p>
+			<p ng-bind="task.dueDate"></p>
+			<button><a href="#!/projects/{{project._id}}/task/{{task._id}}"></a></button>
+		</div>
+	</div>
+	<div id="deployed" class="columns">
+		<div class="deployedTask" ng-repeat="task in tasks | orderBy: 'priority' " ng-if="task.status == 'Deployed' ">
+			<h5 ng-bind="task.name"></h5>
+			<p ng-bind="task.description"></p>
+			<p><span ng-bind="task.owner.firstName"></span> <span ng-bind="task.owner.lastName"></span></p>
+			<p ng-bind="task.dueDate"></p>
+			<button><a href="#!/projects/{{project._id}}/task/{{task._id}}"></a></button>
+		</div>
+	</div>
+</div>
