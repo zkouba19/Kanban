@@ -2,7 +2,8 @@ var app = angular.module('app', ['ngRoute']);
 app.config(function($routeProvider){
 	$routeProvider
 	.when('/', {
-		templateUrl: 'partials/login.html'
+		templateUrl: 'partials/login.html',
+		controller: 'userController'
 	})
 	.when('/projects', {
 		templateUrl: 'partials/dashboard.html', 

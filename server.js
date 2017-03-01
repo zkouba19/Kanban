@@ -1,3 +1,4 @@
+console.log('made it to the server')
 var express  = require('express'),
     bp       = require('body-parser'),
     path     = require('path'),

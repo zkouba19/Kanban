@@ -1,20 +1,20 @@
 <div>
 	<fieldset>
-		<form id="login" ng-submit="login()">
-			Email: <input type="email" name="email">
-			Password: <input type="password" name="password">
+		<form ng-submit="login()">
+			Email: <input type="email" name="email" ng-model="loginUser.email">
+			Password: <input type="password" name="password" ng-model="loginUser.password">
 			<input type="submit" name="submit" value="Sign In">
 		</form>
 	</fieldset>
 </div>
 <div>
 	<fieldset>
-		<form id="register" ng-submit="register()">
-			First Name: <input type="text" name="firstName">
-			Last Name: <input type="text" name="lastName">
-			Email: <input type="email" name="">
-			Password: <input type="password" name="password">
-			Confirm Password: <input type="password" name="confirmPassword">
+		<form ng-submit="register()">
+			First Name: <input type="text" name="firstName" ng-model="registerUser.firstName">
+			Last Name: <input type="text" name="lastName" ng-model="registerUser.lastName">
+			Email: <input type="email" name="email" ng-model="registerUser.email">
+			Password: <input type="password" name="password" ng-model="registerUser.password">
+			Confirm Password: <input type="password" name="confirmPassword" ng-model="registerUser.confirmPassword">
 			<input type="submit" name="submit" value="register">
 		</form>
 	</fieldset>
